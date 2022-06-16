@@ -1,5 +1,5 @@
 const { createServer } = require('net');
-const { EventEmitter } = require('stream');
+const { EventEmitter } = require('events');
 
 const broadcast = ({ message, from }, clients) => {
   Object.entries(clients).forEach(([name, socket]) => {
